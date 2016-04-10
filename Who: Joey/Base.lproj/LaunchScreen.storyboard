@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8150" systemVersion="15A204g" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" initialViewController="01J-lp-oVM">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" initialViewController="01J-lp-oVM">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8122"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -15,8 +16,38 @@
                     <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <animations/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="purpleCircle" translatesAutoresizingMaskIntoConstraints="NO" id="yVk-hz-U71">
+                                <rect key="frame" x="275" y="156" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="0wm-l3-XoX"/>
+                                    <constraint firstAttribute="height" constant="50" id="lH4-XO-QGV"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="purpleCircle" translatesAutoresizingMaskIntoConstraints="NO" id="F6F-EA-vmf">
+                                <rect key="frame" x="275" y="275" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="9KU-Oj-6fq"/>
+                                    <constraint firstAttribute="width" constant="50" id="K1A-F2-EFJ"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="purpleCircle" translatesAutoresizingMaskIntoConstraints="NO" id="HES-EI-kdp">
+                                <rect key="frame" x="275" y="394" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="46Y-68-U4g"/>
+                                    <constraint firstAttribute="width" constant="50" id="KSa-18-iiY"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="0.98431372549019602" blue="0.90588235294117647" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="HES-EI-kdp" firstAttribute="top" secondItem="F6F-EA-vmf" secondAttribute="bottom" constant="69" id="5kE-D2-nvc"/>
+                            <constraint firstItem="HES-EI-kdp" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="LIm-p9-Mtm"/>
+                            <constraint firstItem="yVk-hz-U71" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="Yz9-kh-ecc"/>
+                            <constraint firstItem="F6F-EA-vmf" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="eoq-bt-jGV"/>
+                            <constraint firstItem="F6F-EA-vmf" firstAttribute="top" secondItem="yVk-hz-U71" secondAttribute="bottom" constant="69" id="xaO-rW-eBX"/>
+                            <constraint firstItem="F6F-EA-vmf" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="ykP-mM-gi8"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -24,4 +55,7 @@
             <point key="canvasLocation" x="53" y="375"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="purpleCircle" width="25" height="25"/>
+    </resources>
 </document>

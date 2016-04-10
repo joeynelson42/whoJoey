@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		63879A661CB9A0BA0044CFEA /* PersonalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63879A651CB9A0BA0044CFEA /* PersonalView.swift */; };
 		639463711CB5AFD9008438C9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 639463701CB5AFD9008438C9 /* AppDelegate.swift */; };
 		639463781CB5AFD9008438C9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 639463771CB5AFD9008438C9 /* Assets.xcassets */; };
 		6394637B1CB5AFD9008438C9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 639463791CB5AFD9008438C9 /* LaunchScreen.storyboard */; };
@@ -36,6 +37,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		63879A651CB9A0BA0044CFEA /* PersonalView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonalView.swift; sourceTree = "<group>"; };
 		6394636D1CB5AFD9008438C9 /* Who: Joey.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Who: Joey.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		639463701CB5AFD9008438C9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		639463771CB5AFD9008438C9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -139,6 +141,7 @@
 				63ACA20C1CB9669400DBCB44 /* DDView.swift */,
 				63ACA20E1CB9669C00DBCB44 /* SwedenView.swift */,
 				63ACA2101CB966AB00DBCB44 /* DevView.swift */,
+				63879A651CB9A0BA0044CFEA /* PersonalView.swift */,
 			);
 			name = "Personal Views";
 			sourceTree = "<group>";
@@ -252,6 +255,7 @@
 				63ACA2111CB966AB00DBCB44 /* DevView.swift in Sources */,
 				63ACA2041CB8541800DBCB44 /* CollectionViewController.swift in Sources */,
 				639463711CB5AFD9008438C9 /* AppDelegate.swift in Sources */,
+				63879A661CB9A0BA0044CFEA /* PersonalView.swift in Sources */,
 				63ACA1FB1CB84F0900DBCB44 /* CircularCollectionViewLayout.swift in Sources */,
 				639463871CB5B01D008438C9 /* MainView.swift in Sources */,
 			);

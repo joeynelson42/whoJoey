@@ -12,9 +12,8 @@ let reuseIdentifier = "Cell"
 
 class CollectionViewController: UICollectionViewController {
   
-    //Properties
+    //MARK: Properties
     var colors = [UIColor]()
-    
     var red = CGFloat()
     var blue = CGFloat()
     var green = CGFloat()
@@ -27,16 +26,20 @@ class CollectionViewController: UICollectionViewController {
         collectionView?.registerClass(CircularCollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
         collectionView?.showsVerticalScrollIndicator = false
         collectionView?.showsHorizontalScrollIndicator = false
-        
+        collectionView?.pagingEnabled = true
         colors = [UIColor.earlyDawn(), UIColor.myPink(), UIColor.mauveTaupe(), UIColor.palatinatePurple(), UIColor.clairvoyant()]
         
         collectionView?.backgroundColor = colors[0]
+    }
+    
+    override func prefersStatusBarHidden() -> Bool {
+        return true
     }
 }
 
 extension CollectionViewController {
   
-    // MARK: UICollectionViewDataSource
+    // MARK: UICollectionViewDataSource / Delegate
   
     override func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return 5
@@ -57,6 +60,22 @@ extension CollectionViewController {
     override func scrollViewDidScroll(scrollView: UIScrollView) {
         
         let percent = scrollView.contentOffset.x/(screenWidth * 4)
+        
+        // MARK: Animation Handling
+        switch percent {
+        case (0...0.125):
+            personalViews[0].animateWithPercent(percent)
+        case (0.125...0.375):
+            personalViews[1].animateWithPercent(percent)
+        case (0.375...0.625):
+            personalViews[2].animateWithPercent(percent)
+        case (0.625...0.875):
+            personalViews[3].animateWithPercent(percent)
+        case (0.875...1.0):
+            personalViews[4].animateWithPercent(percent)
+        default:
+            break
+        }
         
         if percent <= 0.1 || percent >= 1.0 {
             return
@@ -86,8 +105,6 @@ extension CollectionViewController {
         red = rgb.red
         green = rgb.green
         blue = rgb.blue
-        
-//        print("x: \(scrollView.contentOffset.x) percent: \(percent)")
         
         let background = UIColor(red:red/256, green:green/256, blue:blue/256, alpha: 1.0)
         collectionView?.backgroundColor = background

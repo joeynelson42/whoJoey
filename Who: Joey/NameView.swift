@@ -8,14 +8,16 @@
 
 import UIKit
 
-class NameView: UIView {
+class NameView: PersonalView {
     
     //MARK: Properties
     
-    var expandedWidth = 120
-    var baseJoeyWidth = 50
-    var baseEdmondWith = 100
-    var baseNelsonWidth = 70
+    var expandedWidth:CGFloat = 150
+    var baseJoeyWidth:CGFloat = 50
+    var baseEdmondWith:CGFloat = 100
+    var baseNelsonWidth:CGFloat = 70
+    
+    let joeyHeight:CGFloat = -50
     
     // joey
     var joeyStackView = UIStackView()
@@ -81,29 +83,56 @@ class NameView: UIView {
     }
     
     func applyConstraints(){
-        let joeyHeight:CGFloat = -50
         
-        // joey
         joeyStackView.addConstraints(
             Constraint.cxcx.of(self),
-            Constraint.cycy.of(self, offset: joeyHeight),
-            Constraint.w.of(120),
+            Constraint.bt.of(edmondStackView, offset: -8),
+            Constraint.w.of(baseJoeyWidth),
             Constraint.h.of(20)
         )
         
         edmondStackView.addConstraints(
             Constraint.cxcx.of(self),
-            Constraint.tb.of(joeyStackView, offset: 6),
-            Constraint.w.of(120),
+            Constraint.cycy.of(self, offset: joeyHeight),
+            Constraint.w.of(baseEdmondWith),
             Constraint.h.of(20)
         )
         
         nelsonStackView.addConstraints(
             Constraint.cxcx.of(self),
             Constraint.tb.of(edmondStackView, offset: 6),
-            Constraint.w.of(120),
+            Constraint.w.of(baseNelsonWidth),
             Constraint.h.of(20)
         )
+    }
+    
+    override func animateWithPercent(percent: CGFloat){
+        let realPercent = (percent * 8)
+        
+        joeyStackView.addConstraints(
+            Constraint.cxcx.of(self),
+            Constraint.bt.of(edmondStackView, offset: -7 - (50 * realPercent)),
+            Constraint.w.of(((expandedWidth - baseJoeyWidth) * realPercent) + baseJoeyWidth),
+            Constraint.h.of(20)
+        )
+        
+        edmondStackView.addConstraints(
+            Constraint.cxcx.of(self),
+            Constraint.cycy.of(self, offset: joeyHeight),
+            Constraint.w.of(((expandedWidth - baseEdmondWith) * realPercent) + baseEdmondWith),
+            Constraint.h.of(20)
+        )
+        
+        nelsonStackView.addConstraints(
+            Constraint.cxcx.of(self),
+            Constraint.tb.of(edmondStackView, offset: 6 + (50 * realPercent)),
+            Constraint.w.of(((expandedWidth - baseNelsonWidth) * realPercent) + baseNelsonWidth),
+            Constraint.h.of(20)
+        )
+        
+        joeyStackView.alpha = 1.0 - realPercent
+        edmondStackView.alpha = 1.0 - realPercent
+        nelsonStackView.alpha = 1.0 - realPercent
     }
 }
 
