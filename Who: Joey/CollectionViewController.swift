@@ -22,7 +22,6 @@ class CollectionViewController: UICollectionViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Register cell classes
         collectionView?.registerClass(CircularCollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
         collectionView?.showsVerticalScrollIndicator = false
         collectionView?.showsHorizontalScrollIndicator = false
@@ -51,10 +50,6 @@ extension CollectionViewController {
          cell.viewContainer = personalViews[indexPath.row]
         
         return cell
-    }
-    
-    override func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
-
     }
   
     override func scrollViewDidScroll(scrollView: UIScrollView) {

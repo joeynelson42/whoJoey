@@ -6,13 +6,16 @@
 //  Copyright © 2016 NelsonJE. All rights reserved.
 //
 
+let screenSize: CGRect = UIScreen.mainScreen().bounds
+let screenWidth = screenSize.width
+let screenHeight = screenSize.height
+
 import UIKit
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.

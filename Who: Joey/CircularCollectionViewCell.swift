@@ -44,8 +44,6 @@ class CircularCollectionViewCell: UICollectionViewCell {
         contentView.layer.shouldRasterize = true
         contentView.layer.rasterizationScale = UIScreen.mainScreen().scale
         contentView.clipsToBounds = true
-//            contentView.layer.borderWidth = 2.0
-//            contentView.layer.borderColor = UIColor.blueColor().CGColor
         
         viewContainer.backgroundColor = UIColor.clearColor()
         

@@ -45,13 +45,13 @@ class SwedenView: PersonalView {
     }
     
     func configureSubviews(){
-        topLabel.text = "you know Sweden?"
+        alpha = 0.0
         
+        topLabel.text = "you know Sweden?"
         topLabel.textColor = UIColor.earlyDawn()
         topLabel.font = UIFont.graphikLight(15)
         topLabel.numberOfLines = 10
         topLabel.textAlignment = .Center
-        topLabel.alpha = 0.0
         
         midLabel.text = "that country where everyone is good at everything and they’re also beautiful?"
         
@@ -59,7 +59,6 @@ class SwedenView: PersonalView {
         midLabel.font = UIFont.graphikLight(15)
         midLabel.numberOfLines = 10
         midLabel.textAlignment = .Center
-        midLabel.alpha = 0.0
         
         bottomLabel.text = "think of where your self-esteem would be after living with them for two years"
         
@@ -67,7 +66,6 @@ class SwedenView: PersonalView {
         bottomLabel.font = UIFont.graphikLight(15)
         bottomLabel.numberOfLines = 10
         bottomLabel.textAlignment = .Center
-        bottomLabel.alpha = 0.0
         
         trFlag.backgroundColor = UIColor.earlyDawn()
         tlFlag.backgroundColor = UIColor.earlyDawn()
@@ -141,9 +139,7 @@ class SwedenView: PersonalView {
         if realPercent >= 0.5 {
             realPercent = 1.0 - realPercent
         }
-        topLabel.alpha = realPercent * 2
-        midLabel.alpha = realPercent * 2
-        bottomLabel.alpha = realPercent * 2
+        alpha = realPercent * 2
         
         topLabel.addConstraints(
             Constraint.bt.of(midLabel, offset: -35 + (40 * realPercent)),

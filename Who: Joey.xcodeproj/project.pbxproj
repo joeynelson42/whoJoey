@@ -12,8 +12,6 @@
 		639463781CB5AFD9008438C9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 639463771CB5AFD9008438C9 /* Assets.xcassets */; };
 		6394637B1CB5AFD9008438C9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 639463791CB5AFD9008438C9 /* LaunchScreen.storyboard */; };
 		639463831CB5AFFC008438C9 /* APConstraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 639463821CB5AFFC008438C9 /* APConstraints.swift */; };
-		639463851CB5B018008438C9 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 639463841CB5B018008438C9 /* MainViewController.swift */; };
-		639463871CB5B01D008438C9 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 639463861CB5B01D008438C9 /* MainView.swift */; };
 		639463891CB5B0E4008438C9 /* UIColor+Windo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 639463881CB5B0E4008438C9 /* UIColor+Windo.swift */; };
 		63ACA1FA1CB84F0900DBCB44 /* CircularCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63ACA1F71CB84F0900DBCB44 /* CircularCollectionViewCell.swift */; };
 		63ACA1FB1CB84F0900DBCB44 /* CircularCollectionViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63ACA1F81CB84F0900DBCB44 /* CircularCollectionViewLayout.swift */; };
@@ -44,8 +42,6 @@
 		6394637A1CB5AFD9008438C9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6394637C1CB5AFD9008438C9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		639463821CB5AFFC008438C9 /* APConstraints.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APConstraints.swift; sourceTree = "<group>"; };
-		639463841CB5B018008438C9 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
-		639463861CB5B01D008438C9 /* MainView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		639463881CB5B0E4008438C9 /* UIColor+Windo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Windo.swift"; sourceTree = "<group>"; };
 		63ACA1F71CB84F0900DBCB44 /* CircularCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircularCollectionViewCell.swift; sourceTree = "<group>"; };
 		63ACA1F81CB84F0900DBCB44 /* CircularCollectionViewLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircularCollectionViewLayout.swift; sourceTree = "<group>"; };
@@ -79,6 +75,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6353E1061CBC0850008117B3 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				63ACA2051CB8553E00DBCB44 /* Main.storyboard */,
+				639463791CB5AFD9008438C9 /* LaunchScreen.storyboard */,
+			);
+			name = Storyboards;
+			sourceTree = "<group>";
+		};
 		639463641CB5AFD9008438C9 = {
 			isa = PBXGroup;
 			children = (
@@ -101,11 +106,8 @@
 				639463701CB5AFD9008438C9 /* AppDelegate.swift */,
 				63ACA1FD1CB84F1000DBCB44 /* Circular Collection View */,
 				63ACA2121CB966B000DBCB44 /* Personal Views */,
-				639463841CB5B018008438C9 /* MainViewController.swift */,
-				639463861CB5B01D008438C9 /* MainView.swift */,
-				63ACA2051CB8553E00DBCB44 /* Main.storyboard */,
+				6353E1061CBC0850008117B3 /* Storyboards */,
 				639463771CB5AFD9008438C9 /* Assets.xcassets */,
-				639463791CB5AFD9008438C9 /* LaunchScreen.storyboard */,
 				63ACA21E1CB9674200DBCB44 /* Graphik Font */,
 				63ACA1FE1CB84F9400DBCB44 /* Utility Extensions */,
 				6394637C1CB5AFD9008438C9 /* Info.plist */,
@@ -251,13 +253,11 @@
 				639463891CB5B0E4008438C9 /* UIColor+Windo.swift in Sources */,
 				63ACA2091CB9665000DBCB44 /* NameView.swift in Sources */,
 				63ACA1FA1CB84F0900DBCB44 /* CircularCollectionViewCell.swift in Sources */,
-				639463851CB5B018008438C9 /* MainViewController.swift in Sources */,
 				63ACA2111CB966AB00DBCB44 /* DevView.swift in Sources */,
 				63ACA2041CB8541800DBCB44 /* CollectionViewController.swift in Sources */,
 				639463711CB5AFD9008438C9 /* AppDelegate.swift in Sources */,
 				63879A661CB9A0BA0044CFEA /* PersonalView.swift in Sources */,
 				63ACA1FB1CB84F0900DBCB44 /* CircularCollectionViewLayout.swift in Sources */,
-				639463871CB5B01D008438C9 /* MainView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

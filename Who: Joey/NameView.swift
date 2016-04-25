@@ -137,7 +137,7 @@ class NameView: PersonalView {
 }
 
 
-class NameCharacterView: UILabel {
+class NameCharacterView: UIView {
     
     //MARK: Properties
     var character = UILabel()

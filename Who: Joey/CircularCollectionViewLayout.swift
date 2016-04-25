@@ -103,24 +103,5 @@ class CircularCollectionViewLayout: UICollectionViewLayout {
   override func shouldInvalidateLayoutForBoundsChange(newBounds: CGRect) -> Bool {
     return true
   }
-  
-//Uncomment the section below to activate snapping behavior
-
-//  override func targetContentOffsetForProposedContentOffset(proposedContentOffset: CGPoint, withScrollingVelocity velocity: CGPoint) -> CGPoint {
-//    var finalContentOffset = proposedContentOffset
-//    let factor = -angleAtExtreme/(collectionViewContentSize().width - CGRectGetWidth(collectionView!.bounds))
-//    let proposedAngle = proposedContentOffset.x*factor
-//    let ratio = proposedAngle/anglePerItem
-//    var multiplier: CGFloat
-//    if (velocity.x > 0) {
-//      multiplier = ceil(ratio)
-//    } else if (velocity.x < 0) {
-//      multiplier = floor(ratio)
-//    } else {
-//      multiplier = round(ratio)
-//    }
-//    finalContentOffset.x = multiplier*anglePerItem/factor
-//    return finalContentOffset
-//  }
 
 }

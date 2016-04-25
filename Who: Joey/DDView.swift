@@ -40,26 +40,25 @@ class DDView: PersonalView {
     }
     
     func configureSubviews(){
+        alpha = 0.0
+        
         topLabel.text = "dungeons & dragons is plagued by a false stigma"
         topLabel.textColor = UIColor.earlyDawn()
         topLabel.font = UIFont.graphikLight(15)
         topLabel.numberOfLines = 10
         topLabel.textAlignment = .Center
-        topLabel.alpha = 0.0
         
         midLabel.text = "it’s not a bunch of dudes wearing leather jerkins and swinging swords"
         midLabel.textColor = UIColor.earlyDawn()
         midLabel.font = UIFont.graphikLight(15)
         midLabel.numberOfLines = 10
         midLabel.textAlignment = .Center
-        midLabel.alpha = 0.0
         
         bottomLabel.text = "it’s a group of friends sitting around a table with food and jokes, creating a story together\n(the leather jerkin is optional)"
         bottomLabel.textColor = UIColor.earlyDawn()
         bottomLabel.font = UIFont.graphikLight(15)
         bottomLabel.numberOfLines = 10
         bottomLabel.textAlignment = .Center
-        bottomLabel.alpha = 0.0
         
         diImageView.image = UIImage(named: "20Sided")
         diImageView.contentMode = .ScaleAspectFit
@@ -103,9 +102,7 @@ class DDView: PersonalView {
             realPercent = 1.0 - realPercent
         }
         
-        topLabel.alpha = realPercent * 2
-        midLabel.alpha = realPercent * 2
-        bottomLabel.alpha = realPercent * 2
+        alpha = realPercent * 2
         
         topLabel.addConstraints(
             Constraint.bt.of(midLabel, offset: -35 + (40 * realPercent)),
